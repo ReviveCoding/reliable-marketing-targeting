@@ -17,3 +17,5 @@ retraining_runs/
 .DS_Store
 .vscode/
 .idea/
+
+data/TakeHomeProject.zip
