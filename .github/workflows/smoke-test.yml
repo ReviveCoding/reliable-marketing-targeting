@@ -1,0 +1,17 @@
+name: smoke-test
+on: [push, pull_request]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: python -m pip install --upgrade pip && pip install -r requirements.txt && pip install -e .
+      - run: python scripts/verify_selected_four_artifacts.py
+      - run: python scripts/evaluate_selected_four_models.py
+      - run: pytest -q
+      - run: python scripts/run_full_retraining_pipeline.py --models practical --quick-rows 200 --n-estimators 1 --out-dir /tmp/retraining_smoke
+      - run: python scripts/predict_selected_model.py --model practical --include-labels --out /tmp/practical_ci_scores.csv

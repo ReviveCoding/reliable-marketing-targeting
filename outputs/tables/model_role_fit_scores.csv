@@ -1,0 +1,5 @@
+model,predictive_performance,interpretability,calibration_quality,topk_targeting,governance_value
+REFERENCE_practical_LightGBM,5,3,5,5,3
+Monotonic_constrained_LightGBM,4,4,4,4,4
+LR_L2_classpow035_C1,3,5,4,3,5
+LR_L2_population_C1,3,5,3,3,5

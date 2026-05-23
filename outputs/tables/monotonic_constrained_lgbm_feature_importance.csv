@@ -1,0 +1,90 @@
+feature,gain_importance,monotone_constraint
+weeks worked in year,330642872.796484,1
+detailed occupation recode,261256157.13510895,0
+any_investment_signal,193258013.08544922,1
+age,135930458.63858366,0
+sex,133242244.49279785,0
+agebin_education_combo,111484828.03049469,0
+education,93443234.21583366,0
+capital gains,64635237.23388672,1
+dividends from stocks,55311373.97957611,1
+detailed household and family stat,42887837.24215698,0
+detailed industry recode,40731558.525960326,0
+major occupation code,34813572.90994823,0
+capital losses,31894213.77681017,0
+employment_intensity,31824399.998046875,1
+num persons worked for employer,25035570.89297867,1
+tax filer stat,19762522.100156873,0
+major industry code,19711786.175559998,0
+class of worker,17775778.661201477,0
+wage per hour,17566141.34655142,0
+age_squared,15894588.210449219,0
+marital_tax_combo,10186131.467266798,0
+log1p_dividends from stocks,5861469.787086487,1
+employer_size_bin,5584583.01159668,0
+log1p_capital losses,5067845.677220345,0
+log1p_capital gains,4746945.8388671875,1
+detailed household summary in household,4707928.96496582,0
+country of birth father,4702110.241699219,0
+own business or self employed,4503254.7685546875,0
+race,4407841.556274414,0
+full or part time employment stat,3792390.514622569,0
+country of birth mother,3342836.799255371,0
+member of a labor union,2857542.0039367676,0
+marital stat,1999513.3378829956,0
+hispanic origin,1969807.282043457,0
+partial_year_worker,1966495.9747314453,0
+migration code-change in reg,1909688.5617218018,0
+citizenship,1797263.413116455,0
+live in this house 1 year ago,1720057.3621826172,0
+state of previous residence,1537665.4714355469,0
+country of birth self,1532101.726196289,0
+migration prev res in sunbelt,1518333.2998685837,0
+log1p_wage per hour,1477033.7274365425,0
+region of previous residence,1277292.31640625,0
+fill inc questionnaire for veteran's admin,1077606.3826904297,0
+migration code-change in msa,718358.4281616211,0
+reason for unemployment,687673.7099609375,0
+migration code-move within reg,669384.2412109375,0
+year,530347.1572098732,0
+self_employed_flag,453462.7619628906,0
+country of birth father_is_unknown,444471.1044921875,0
+not_worked_flag,427397.2839317322,0
+country of birth mother_is_unknown,404176.4638671875,0
+country of birth self_is_unknown,278744.7529296875,0
+birth_self_group,251522.22164916992,0
+migration code-change in msa_is_unknown,150970.7998046875,0
+veterans benefits,108545.72998046875,0
+working_age_flag,56932.8994140625,0
+state of previous residence_is_unknown,53459.570068359375,0
+enroll in edu inst last wk,49411.501220703125,0
+has_wage per hour,29417.6005859375,0
+full_year_worker,0.0,1
+has_dividends from stocks,0.0,1
+has_capital losses,0.0,0
+has_capital gains,0.0,1
+migration code-move within reg_is_unknown,0.0,0
+fill inc questionnaire for veteran's admin_is_unknown,0.0,0
+citizenship_is_unknown,0.0,0
+family members under 18_is_unknown,0.0,0
+migration prev res in sunbelt_is_unknown,0.0,0
+detailed household summary in household_is_unknown,0.0,0
+migration code-change in reg_is_unknown,0.0,0
+full or part time employment stat_is_unknown,0.0,0
+tax filer stat_is_unknown,0.0,0
+major industry code_is_unknown,0.0,0
+marital stat_is_unknown,0.0,0
+enroll in edu inst last wk_is_unknown,0.0,0
+education_is_unknown,0.0,0
+class of worker_is_unknown,0.0,0
+major occupation code_is_unknown,0.0,0
+race_is_unknown,0.0,0
+live in this house 1 year ago_is_unknown,0.0,0
+region of previous residence_is_unknown,0.0,0
+detailed household and family stat_is_unknown,0.0,0
+hispanic origin_is_unknown,0.0,0
+sex_is_unknown,0.0,0
+member of a labor union_is_unknown,0.0,0
+reason for unemployment_is_unknown,0.0,0
+family members under 18,0.0,0
+age_bin,0.0,0

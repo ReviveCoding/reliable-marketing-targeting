@@ -1,0 +1,6 @@
+tier,n,weighted_share,avg_score,positive_rate_w,lift_vs_overall,recommended_action
+Top 5% premium,1995,0.051435612825174094,0.6834861251848026,0.6993875083467422,10.831557668435,Prioritize for high-value personalized outreach and premium offers.
+Top 5-10% strong,1995,0.05085090230673773,0.2852373096015094,0.2641858598572155,4.091500551665302,Use targeted offers with controlled acquisition cost and message testing.
+Top 10-20% growth,3991,0.10039595102629002,0.10259355815888115,0.1010094499865647,1.5643540519799346,Use lower-cost digital campaigns and monitor incremental response.
+Middle 20-50% broad,11971,0.3020532106189678,0.016550979950403926,0.01529833877468082,0.23692850771800947,"Keep for broad awareness or small randomized tests, not expensive outreach."
+Bottom 50% low-priority,19953,0.4952643232228303,0.0007483903713407654,0.0008077782686074018,0.012510227585294284,Suppress from high-cost campaigns; use only low-frequency broad messaging.

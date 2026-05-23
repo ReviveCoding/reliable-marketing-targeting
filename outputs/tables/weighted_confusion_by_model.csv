@@ -1,0 +1,9 @@
+model,model_key,true_label,pred_0,pred_1
+REFERENCE_practical_LightGBM,practical,true_0,63417610.15000005,1535491.530000001
+REFERENCE_practical_LightGBM,practical,true_1,1689138.8699999992,2794341.690000005
+Monotonic_constrained_LightGBM,monotonic,true_0,63055962.120000035,1897139.560000001
+Monotonic_constrained_LightGBM,monotonic,true_1,1577653.0800000003,2905827.480000006
+LR_L2_classpow035_C1,logistic_classweighted,true_0,62299507.319999956,2653594.3600000013
+LR_L2_classpow035_C1,logistic_classweighted,true_1,1574048.7499999988,2909431.810000006
+LR_L2_population_C1,logistic_population,true_0,62896181.659999974,2056920.0200000005
+LR_L2_population_C1,logistic_population,true_1,1839574.4399999983,2643906.120000005

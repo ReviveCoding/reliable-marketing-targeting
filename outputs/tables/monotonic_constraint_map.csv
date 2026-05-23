@@ -1,0 +1,90 @@
+feature,monotone_constraint,direction,business_rationale,gain_importance
+weeks worked in year,1,increase,More weeks worked generally signals stronger labor-force attachment.,330642872.796484
+detailed occupation recode,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",261256157.1351089
+any_investment_signal,1,increase,"Capital gains, dividends, or losses indicate financial/investment activity associated with higher-income segments.",193258013.0854492
+age,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",135930458.63858366
+sex,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",133242244.49279784
+agebin_education_combo,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",111484828.03049468
+education,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",93443234.21583366
+capital gains,1,increase,Higher capital gains are a direct high-income signal.,64635237.23388672
+dividends from stocks,1,increase,Dividend income is an investment-income signal.,55311373.97957611
+detailed household and family stat,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",42887837.24215698
+detailed industry recode,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",40731558.525960326
+major occupation code,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",34813572.90994823
+capital losses,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",31894213.77681017
+employment_intensity,1,increase,Higher employment intensity should not reduce predicted high-income likelihood.,31824399.998046875
+num persons worked for employer,1,increase,Larger employer size can indicate more stable labor-market attachment and stronger income potential.,25035570.89297867
+tax filer stat,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",19762522.10015688
+major industry code,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",19711786.17556
+class of worker,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",17775778.661201477
+wage per hour,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",17566141.34655142
+age_squared,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",15894588.21044922
+marital_tax_combo,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",10186131.467266798
+log1p_dividends from stocks,1,increase,Higher transformed dividend income is an investment-income signal associated with higher-income likelihood.,5861469.787086487
+employer_size_bin,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",5584583.01159668
+log1p_capital losses,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",5067845.677220345
+log1p_capital gains,1,increase,Higher transformed capital gains are a financial signal associated with higher-income likelihood.,4746945.838867188
+detailed household summary in household,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",4707928.96496582
+country of birth father,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",4702110.241699219
+own business or self employed,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",4503254.768554688
+race,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",4407841.556274414
+full or part time employment stat,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",3792390.514622569
+country of birth mother,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",3342836.799255371
+member of a labor union,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",2857542.003936768
+marital stat,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1999513.337882996
+hispanic origin,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1969807.282043457
+partial_year_worker,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1966495.9747314453
+migration code-change in reg,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1909688.5617218013
+citizenship,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1797263.413116455
+live in this house 1 year ago,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1720057.3621826172
+state of previous residence,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1537665.4714355469
+country of birth self,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1532101.726196289
+migration prev res in sunbelt,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1518333.2998685837
+log1p_wage per hour,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1477033.7274365425
+region of previous residence,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1277292.31640625
+fill inc questionnaire for veteran's admin,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",1077606.3826904297
+migration code-change in msa,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",718358.4281616211
+reason for unemployment,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",687673.7099609375
+migration code-move within reg,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",669384.2412109375
+year,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",530347.1572098732
+self_employed_flag,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",453462.7619628906
+country of birth father_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",444471.1044921875
+not_worked_flag,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",427397.2839317322
+country of birth mother_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",404176.4638671875
+country of birth self_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",278744.7529296875
+birth_self_group,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",251522.22164916992
+migration code-change in msa_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",150970.7998046875
+veterans benefits,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",108545.72998046876
+working_age_flag,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",56932.8994140625
+state of previous residence_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",53459.570068359375
+enroll in edu inst last wk,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",49411.501220703125
+has_wage per hour,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",29417.6005859375
+full_year_worker,1,increase,Full-year work indicates stronger employment attachment and should not reduce high-income likelihood.,0.0
+has_dividends from stocks,1,increase,Presence of dividend income indicates investment activity associated with higher-income likelihood.,0.0
+has_capital losses,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+has_capital gains,1,increase,Presence of capital gains indicates investment activity associated with higher-income likelihood.,0.0
+migration code-move within reg_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+fill inc questionnaire for veteran's admin_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+citizenship_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+family members under 18_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+migration prev res in sunbelt_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+detailed household summary in household_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+migration code-change in reg_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+full or part time employment stat_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+tax filer stat_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+major industry code_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+marital stat_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+enroll in edu inst last wk_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+education_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+class of worker_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+major occupation code_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+race_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+live in this house 1 year ago_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+region of previous residence_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+detailed household and family stat_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+hispanic origin_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+sex_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+member of a labor union_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+reason for unemployment_is_unknown,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+family members under 18,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0
+age_bin,0,unconstrained,"Left unconstrained because the effect may be categorical, nonlinear, segment-specific, or not reliably directional.",0.0

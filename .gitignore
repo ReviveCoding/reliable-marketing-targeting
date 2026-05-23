@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+
+# Extracted raw data and generated prediction CSVs
+# Prediction CSVs are generated on demand by scripts/predict_selected_model.py.
+data/TakeHomeProject/
+outputs/predictions/*.csv
+
+# Local retraining runs are reproducible and can be regenerated
+retraining_runs/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

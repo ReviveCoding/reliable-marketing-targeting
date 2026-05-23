@@ -1,0 +1,2 @@
+k,selection_metric,inertia_fit_sample,silhouette_fit_sample,fit_rows
+4,lowest_sample_inertia_with_silhouette_diagnostic,14374.67031611686,0.2917808612091477,2000

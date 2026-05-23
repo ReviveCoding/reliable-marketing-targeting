@@ -1,0 +1,90 @@
+feature,split_importance,gain_importance
+weeks worked in year,679.0,482343188.377827
+any_investment_signal,287.0,252626569.11786985
+detailed occupation recode,1764.0,247199393.93918037
+sex,444.0,109014957.83752441
+age,1982.0,100411792.48096108
+agebin_education_combo,1265.0,94194745.98404598
+capital gains,1099.0,82184452.36174655
+education,1373.0,80435771.73178911
+dividends from stocks,1089.0,60259955.06251526
+detailed industry recode,1540.0,42067556.581718445
+detailed household and family stat,511.0,34278412.28977203
+num persons worked for employer,984.0,32851615.20678711
+capital losses,755.0,30242255.02589178
+major occupation code,709.0,24445497.022460938
+major industry code,958.0,20973131.322006226
+class of worker,692.0,20006022.18597412
+wage per hour,565.0,17216222.58033043
+tax filer stat,356.0,17015842.045898438
+marital_tax_combo,352.0,10187185.227050781
+log1p_capital gains,66.0,6800820.8126831055
+age_squared,242.0,6197583.022338867
+own business or self employed,269.0,5726975.154968262
+log1p_dividends from stocks,119.0,5494715.237182617
+country of birth father,289.0,5388137.611083984
+detailed household summary in household,169.0,5111954.228515625
+race,212.0,5109683.721069336
+country of birth mother,273.0,4570267.397216797
+full or part time employment stat,239.0,4336686.636474609
+member of a labor union,200.0,3571475.293029785
+log1p_capital losses,79.0,3255560.6744384766
+marital stat,144.0,3210815.8221853673
+citizenship,116.0,2482128.328277588
+hispanic origin,135.0,2218040.5876464844
+employer_size_bin,51.0,2138770.9060058594
+migration code-change in reg,144.0,2083128.5986328125
+live in this house 1 year ago,139.0,2019705.1575622559
+employment_intensity,55.0,1976960.526807785
+country of birth self,131.0,1904994.5139160156
+state of previous residence,150.0,1799390.4068603516
+log1p_wage per hour,47.0,1684596.583984375
+migration prev res in sunbelt,122.0,1324079.9323120117
+year,81.0,1301203.2823486328
+region of previous residence,74.0,1262685.0339355469
+fill inc questionnaire for veteran's admin,61.0,1145824.1984863281
+migration code-change in msa,63.0,1084074.9360351562
+has_capital gains,11.0,787435.1831054688
+reason for unemployment,70.0,680225.0115966797
+country of birth self_is_unknown,28.0,663237.1867675781
+has_dividends from stocks,14.0,642113.771484375
+migration code-move within reg,41.0,605118.9075927734
+partial_year_worker,24.0,494252.72998046875
+veterans benefits,22.0,413454.11767578125
+country of birth father_is_unknown,24.0,411642.564453125
+birth_self_group,23.0,321084.091796875
+country of birth mother_is_unknown,22.0,285495.7297363281
+self_employed_flag,16.0,261371.29125976562
+migration code-change in msa_is_unknown,11.0,178384.53076171875
+state of previous residence_is_unknown,13.0,139259.50146484375
+has_wage per hour,4.0,138861.9873046875
+full_year_worker,7.0,120376.8505859375
+enroll in edu inst last wk,2.0,41470.7998046875
+working_age_flag,1.0,37403.3984375
+not_worked_flag,0.0,0.0
+has_capital losses,0.0,0.0
+class of worker_is_unknown,0.0,0.0
+education_is_unknown,0.0,0.0
+enroll in edu inst last wk_is_unknown,0.0,0.0
+marital stat_is_unknown,0.0,0.0
+major industry code_is_unknown,0.0,0.0
+major occupation code_is_unknown,0.0,0.0
+race_is_unknown,0.0,0.0
+hispanic origin_is_unknown,0.0,0.0
+sex_is_unknown,0.0,0.0
+member of a labor union_is_unknown,0.0,0.0
+reason for unemployment_is_unknown,0.0,0.0
+full or part time employment stat_is_unknown,0.0,0.0
+tax filer stat_is_unknown,0.0,0.0
+region of previous residence_is_unknown,0.0,0.0
+detailed household and family stat_is_unknown,0.0,0.0
+detailed household summary in household_is_unknown,0.0,0.0
+migration code-change in reg_is_unknown,0.0,0.0
+migration code-move within reg_is_unknown,0.0,0.0
+live in this house 1 year ago_is_unknown,0.0,0.0
+migration prev res in sunbelt_is_unknown,0.0,0.0
+family members under 18_is_unknown,0.0,0.0
+citizenship_is_unknown,0.0,0.0
+fill inc questionnaire for veteran's admin_is_unknown,0.0,0.0
+family members under 18,0.0,0.0
+age_bin,0.0,0.0

@@ -1,0 +1,151 @@
+segment,feature,rank,category,weighted_count,share_among_top_categories
+Top 5% premium,education,1,Bachelors degree(BA AB BS),1409619.45,0.45123525097943523
+Top 5% premium,education,2,Masters degree(MA MS MEng MEd MSW MBA),669892.4,0.21444019181433416
+Top 5% premium,education,3,Prof school degree (MD DDS DVM LLB JD),410318.21,0.13134753530166077
+Top 5% premium,education,4,Some college but no degree,337776.13,0.10812598875207939
+Top 5% premium,education,5,High school graduate,296306.33,0.09485103315249047
+Top 5% premium,major occupation code,1,Executive admin and managerial,1301612.16,0.39620497502110164
+Top 5% premium,major occupation code,2,Professional specialty,1211737.71,0.3688475906084628
+Top 5% premium,major occupation code,3,Sales,450226.58,0.13704697633028878
+Top 5% premium,major occupation code,4,Precision production craft & repair,168248.95,0.05121423499306935
+Top 5% premium,major occupation code,5,Not in universe,153373.53,0.04668622304707739
+Top 5% premium,major industry code,1,Manufacturing-durable goods,532111.05,0.2921823462216421
+Top 5% premium,major industry code,2,Other professional services,379333.56,0.20829217803578412
+Top 5% premium,major industry code,3,Finance insurance and real estate,358287.86,0.19673597749479402
+Top 5% premium,major industry code,4,Manufacturing-nondurable goods,299083.12,0.164226635994289
+Top 5% premium,major industry code,5,Public administration,252345.26,0.13856286225349065
+Top 5% premium,marital stat,1,Married-civilian spouse present,2952223.08,0.8322079703312991
+Top 5% premium,marital stat,2,Divorced,267007.13,0.07526716501426624
+Top 5% premium,marital stat,3,Never married,240465.84,0.06778538857585617
+Top 5% premium,marital stat,4,Widowed,56880.78,0.01603423494496261
+Top 5% premium,marital stat,5,Separated,30881.48,0.008705241133616029
+Top 5% premium,tax filer stat,1,Joint both under 65,2783566.1,0.7793800485394262
+Top 5% premium,tax filer stat,2,Single,528247.42,0.14790577448131256
+Top 5% premium,tax filer stat,3,Joint both 65+,90881.72,0.02544627890997327
+Top 5% premium,tax filer stat,4,Joint one under 65 & one 65+,84648.72,0.02370108024465462
+Top 5% premium,tax filer stat,5,Head of household,84169.2,0.02356681782463318
+Top 5% premium,class of worker,1,Private,2255793.01,0.6835480084149815
+Top 5% premium,class of worker,2,Self-employed-incorporated,356312.19,0.10796934238593128
+Top 5% premium,class of worker,3,Self-employed-not incorporated,284154.05,0.08610405923748787
+Top 5% premium,class of worker,4,Local government,217503.99,0.0659078286561461
+Top 5% premium,class of worker,5,Federal government,186360.5,0.056470761305453365
+Top 5-10% strong,education,1,Bachelors degree(BA AB BS),1153515.09,0.37052925799995695
+Top 5-10% strong,education,2,Some college but no degree,662626.08,0.21284710697093703
+Top 5-10% strong,education,3,High school graduate,652962.88,0.20974311781904378
+Top 5-10% strong,education,4,Masters degree(MA MS MEng MEd MSW MBA),458166.91,0.14717123917506186
+Top 5-10% strong,education,5,Associates degree-academic program,185884.25,0.05970927803500038
+Top 5-10% strong,major occupation code,1,Professional specialty,962071.61,0.3323850997848236
+Top 5-10% strong,major occupation code,2,Executive admin and managerial,804789.19,0.27804576337503334
+Top 5-10% strong,major occupation code,3,Sales,567142.39,0.19594142258532435
+Top 5-10% strong,major occupation code,4,Precision production craft & repair,378064.14,0.13061697860408075
+Top 5-10% strong,major occupation code,5,Not in universe,182381.34,0.06301073565073793
+Top 5-10% strong,major industry code,1,Manufacturing-durable goods,389563.51,0.2580603759123332
+Top 5-10% strong,major industry code,2,Finance insurance and real estate,301837.68,0.19994774450334565
+Top 5-10% strong,major industry code,3,Public administration,277500.55,0.18382598577797807
+Top 5-10% strong,major industry code,4,Retail trade,276442.42,0.18312504377865138
+Top 5-10% strong,major industry code,5,Education,264238.66,0.17504085002769176
+Top 5-10% strong,marital stat,1,Married-civilian spouse present,2759560.57,0.7865301638257205
+Top 5-10% strong,marital stat,2,Never married,328667.92,0.09367695558929472
+Top 5-10% strong,marital stat,3,Divorced,316861.84,0.09031198576855998
+Top 5-10% strong,marital stat,4,Separated,56597.2,0.01613133825436456
+Top 5-10% strong,marital stat,5,Widowed,46837.25,0.013349556562060253
+Top 5-10% strong,tax filer stat,1,Joint both under 65,2587656.5,0.7330417492750033
+Top 5-10% strong,tax filer stat,2,Single,630337.65,0.17856458675635456
+Top 5-10% strong,tax filer stat,3,Head of household,136338.86,0.03862262105830498
+Top 5-10% strong,tax filer stat,4,Joint both 65+,106317.13,0.030117944539044473
+Top 5-10% strong,tax filer stat,5,Joint one under 65 & one 65+,69375.95,0.019653098371292775
+Top 5-10% strong,class of worker,1,Private,2104726.75,0.651913449134326
+Top 5-10% strong,class of worker,2,Self-employed-not incorporated,349418.01,0.10822796835206872
+Top 5-10% strong,class of worker,3,Local government,341219.37,0.10568853957319722
+Top 5-10% strong,class of worker,4,Self-employed-incorporated,250791.62,0.07767964654232917
+Top 5-10% strong,class of worker,5,Not in universe,182381.34,0.05649039639807886
+Top 10-20% growth,education,1,High school graduate,2083707.26,0.3332467606994791
+Top 10-20% growth,education,2,Bachelors degree(BA AB BS),1637634.28,0.2619064249075102
+Top 10-20% growth,education,3,Some college but no degree,1601153.52,0.25607206643920255
+Top 10-20% growth,education,4,Masters degree(MA MS MEng MEd MSW MBA),549395.09,0.08786461399894474
+Top 10-20% growth,education,5,Associates degree-occup /vocational,380855.58,0.060910133954863374
+Top 10-20% growth,major occupation code,1,Professional specialty,1303310.21,0.2619966113427152
+Top 10-20% growth,major occupation code,2,Executive admin and managerial,1105665.24,0.2222652319737677
+Top 10-20% growth,major occupation code,3,Precision production craft & repair,1066644.43,0.21442111327247407
+Top 10-20% growth,major occupation code,4,Sales,752262.54,0.15122281311681257
+Top 10-20% growth,major occupation code,5,Not in universe,746648.37,0.1500942302942304
+Top 10-20% growth,major industry code,1,Not in universe or children,746648.37,0.24029685829862385
+Top 10-20% growth,major industry code,2,Retail trade,656961.05,0.211432426135967
+Top 10-20% growth,major industry code,3,Manufacturing-durable goods,620615.66,0.19973524258671713
+Top 10-20% growth,major industry code,4,Education,550579.59,0.17719525152160234
+Top 10-20% growth,major industry code,5,Construction,532386.89,0.1713402214570897
+Top 10-20% growth,marital stat,1,Married-civilian spouse present,4981835.29,0.7199183154424971
+Top 10-20% growth,marital stat,2,Never married,825120.91,0.11923711262713792
+Top 10-20% growth,marital stat,3,Divorced,784487.29,0.11336520286740547
+Top 10-20% growth,marital stat,4,Widowed,191048.24,0.027608124135523934
+Top 10-20% growth,marital stat,5,Separated,137509.03,0.019871244927435527
+Top 10-20% growth,tax filer stat,1,Joint both under 65,4379985.31,0.6303842548321755
+Top 10-20% growth,tax filer stat,2,Single,1591529.33,0.22905899443201597
+Top 10-20% growth,tax filer stat,3,Head of household,373904.91,0.0538138261629105
+Top 10-20% growth,tax filer stat,4,Joint both 65+,368531.24,0.053040427003116515
+Top 10-20% growth,tax filer stat,5,Joint one under 65 & one 65+,234168.99,0.03370249756978139
+Top 10-20% growth,class of worker,1,Private,3961229.58,0.610327811149222
+Top 10-20% growth,class of worker,2,Self-employed-not incorporated,884734.75,0.13631581116668176
+Top 10-20% growth,class of worker,3,Not in universe,745572.1,0.11487427796268472
+Top 10-20% growth,class of worker,4,Local government,608995.1,0.0938311296725199
+Top 10-20% growth,class of worker,5,State government,289799.58,0.0446509700488917
+Middle 20-50% broad,education,1,High school graduate,8625134.53,0.49844686955878237
+Middle 20-50% broad,education,2,Some college but no degree,4506618.34,0.2604376541671399
+Middle 20-50% broad,education,3,Bachelors degree(BA AB BS),2657738.72,0.15359082695828577
+Middle 20-50% broad,education,4,Associates degree-occup /vocational,810324.51,0.046828685851959026
+Middle 20-50% broad,education,5,Associates degree-academic program,704203.76,0.04069596346383297
+Middle 20-50% broad,major occupation code,1,Not in universe,6210685.39,0.42211784260275476
+Middle 20-50% broad,major occupation code,2,Adm support including clerical,3327633.03,0.22616719208783942
+Middle 20-50% broad,major occupation code,3,Other service,1943854.1,0.13211673873348775
+Middle 20-50% broad,major occupation code,4,Precision production craft & repair,1877069.63,0.1275776396444952
+Middle 20-50% broad,major occupation code,5,Sales,1353913.19,0.09202058693142297
+Middle 20-50% broad,major industry code,1,Not in universe or children,6210685.39,0.5003730251932526
+Middle 20-50% broad,major industry code,2,Retail trade,2503465.99,0.20169542847906535
+Middle 20-50% broad,major industry code,3,Manufacturing-durable goods,1395619.11,0.11244011123355499
+Middle 20-50% broad,major industry code,4,Education,1187202.77,0.09564874152202214
+Middle 20-50% broad,major industry code,5,Construction,1115137.46,0.08984269357210505
+Middle 20-50% broad,marital stat,1,Married-civilian spouse present,11573970.63,0.5600727900008278
+Middle 20-50% broad,marital stat,2,Never married,4289077.79,0.20755156904833827
+Middle 20-50% broad,marital stat,3,Divorced,2311625.62,0.1118612317085855
+Middle 20-50% broad,marital stat,4,Widowed,1963352.45,0.09500804171527957
+Middle 20-50% broad,marital stat,5,Separated,527092.11,0.02550636752696885
+Middle 20-50% broad,tax filer stat,1,Joint both under 65,8960636.76,0.44068485619792774
+Middle 20-50% broad,tax filer stat,2,Single,6706303.16,0.329816543493535
+Middle 20-50% broad,tax filer stat,3,Joint both 65+,1659659.86,0.08162220903836447
+Middle 20-50% broad,tax filer stat,4,Head of household,1527102.18,0.07510301138385192
+Middle 20-50% broad,tax filer stat,5,Nonfiler,1479732.77,0.07277337988632086
+Middle 20-50% broad,class of worker,1,Private,11119793.75,0.5448101062126708
+Middle 20-50% broad,class of worker,2,Not in universe,6197903.53,0.3036639488457407
+Middle 20-50% broad,class of worker,3,Self-employed-not incorporated,1279226.59,0.06267522492204253
+Middle 20-50% broad,class of worker,4,Local government,1187201.81,0.05816650548954427
+Middle 20-50% broad,class of worker,5,State government,626277.18,0.03068421453000169
+Bottom 50% low-priority,education,1,Children,15659634.37,0.559798360512578
+Bottom 50% low-priority,education,2,High school graduate,5498414.36,0.1965565268907882
+Bottom 50% low-priority,education,3,Some college but no degree,3005958.14,0.10745655989038515
+Bottom 50% low-priority,education,4,10th grade,1969521.51,0.07040617208818375
+Bottom 50% low-priority,education,5,7th and 8th grade,1840176.93,0.06578238061806478
+Bottom 50% low-priority,major occupation code,1,Not in universe,27109571.85,0.8395602135394645
+Bottom 50% low-priority,major occupation code,2,Other service,2107400.98,0.06526440279366037
+Bottom 50% low-priority,major occupation code,3,Adm support including clerical,1286020.21,0.0398269440807737
+Bottom 50% low-priority,major occupation code,4,Sales,982024.26,0.03041244996373982
+Bottom 50% low-priority,major occupation code,5,Handlers equip cleaners etc,805188.23,0.024935989622361498
+Bottom 50% low-priority,major industry code,1,Not in universe or children,27109571.85,0.8714603672611865
+Bottom 50% low-priority,major industry code,2,Retail trade,2547510.36,0.08189189878066175
+Bottom 50% low-priority,major industry code,3,Education,506719.06,0.016288917455767313
+Bottom 50% low-priority,major industry code,4,Manufacturing-nondurable goods,484035.85,0.015559746274951977
+Bottom 50% low-priority,major industry code,5,Medical except hospital,460372.58,0.0147990702274326
+Bottom 50% low-priority,marital stat,1,Never married,24661472.1,0.7240616474714222
+Bottom 50% low-priority,marital stat,2,Married-civilian spouse present,6590435.52,0.1934954077686781
+Bottom 50% low-priority,marital stat,3,Widowed,1274478.71,0.037418737644207896
+Bottom 50% low-priority,marital stat,4,Divorced,1070969.79,0.03144370893169524
+Bottom 50% low-priority,marital stat,5,Separated,462550.5,0.013580498183996488
+Bottom 50% low-priority,tax filer stat,1,Nonfiler,24046612.22,0.7073307799375619
+Bottom 50% low-priority,tax filer stat,2,Single,4435320.7,0.13046489964165994
+Bottom 50% low-priority,tax filer stat,3,Joint both under 65,4377905.11,0.12877602082231848
+Bottom 50% low-priority,tax filer stat,4,Head of household,606999.35,0.01785487784013066
+Bottom 50% low-priority,tax filer stat,5,Joint both 65+,529438.34,0.015573421758329003
+Bottom 50% low-priority,class of worker,1,Not in universe,26968410.9,0.7904279859090867
+Bottom 50% low-priority,class of worker,2,Private,6386257.58,0.18717738821073948
+Bottom 50% low-priority,class of worker,3,Local government,347256.31,0.010177874652136862
+Bottom 50% low-priority,class of worker,4,State government,239420.18,0.007017262209668832
+Bottom 50% low-priority,class of worker,5,Self-employed-not incorporated,177400.04,0.005199489018368206

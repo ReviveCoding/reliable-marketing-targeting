@@ -1,0 +1,51 @@
+model,feature,coefficient,abs_coefficient,odds_ratio,direction
+LR_L2_population_C1,cat__sex_Male,0.6758557637198698,0.6758557637198698,1.9657144435021487,positive driver
+LR_L2_population_C1,cat__education_Prof school degree (MD DDS DVM LLB JD),0.6578020558523884,0.6578020558523884,1.9305444389423885,positive driver
+LR_L2_population_C1,cat__education_Masters degree(MA MS MEng MEd MSW MBA),0.6079444196932519,0.6079444196932519,1.836652129868504,positive driver
+LR_L2_population_C1,cat__education_Doctorate degree(PhD EdD),0.5357118034917729,0.5357118034917729,1.7086640425291766,positive driver
+LR_L2_population_C1,cat__class of worker_Self-employed-incorporated,0.5045636563420993,0.5045636563420993,1.6562626630563555,positive driver
+LR_L2_population_C1,num__age,0.4449472086793246,0.4449472086793246,1.5604078176687728,positive driver
+LR_L2_population_C1,cat__major occupation code_Sales,0.4052111199296123,0.4052111199296123,1.499619066110572,positive driver
+LR_L2_population_C1,cat__age_bin_35_44,0.3567163021968741,0.3567163021968741,1.428630513019152,positive driver
+LR_L2_population_C1,cat__major occupation code_Professional specialty,0.3263993829269394,0.3263993829269394,1.385968790624075,positive driver
+LR_L2_population_C1,num__log1p_capital gains,0.314668873780942,0.314668873780942,1.3698056572846882,positive driver
+LR_L2_population_C1,num__capital losses,0.3141222395575756,0.3141222395575756,1.3690570792508816,positive driver
+LR_L2_population_C1,num__num persons worked for employer,0.3071688901746497,0.3071688901746497,1.3595705667934253,positive driver
+LR_L2_population_C1,cat__age_bin_45_54,0.3005797451563136,0.3005797451563136,1.3506416085720203,positive driver
+LR_L2_population_C1,cat__major occupation code_Precision production craft & repair,0.2857739145094943,0.2857739145094943,1.3307915485782358,positive driver
+LR_L2_population_C1,num__employment_intensity,0.2840028578059802,0.2840028578059802,1.3284367271617932,positive driver
+LR_L2_population_C1,num__weeks worked in year,0.2840028578059802,0.2840028578059802,1.3284367271617932,positive driver
+LR_L2_population_C1,cat__agebin_education_combo_35_44__Prof school degree (MD DDS DVM LLB JD),0.2768201817718507,0.2768201817718507,1.3189291822015623,positive driver
+LR_L2_population_C1,cat__detailed household and family stat_Nonfamily householder,0.2612613448816285,0.2612613448816285,1.2985669949283214,positive driver
+LR_L2_population_C1,num__capital gains,0.2448770691671039,0.2448770691671039,1.2774642638060332,positive driver
+LR_L2_population_C1,cat__detailed household summary in household_Householder,0.2425221170571503,0.2425221170571503,1.274459436143895,positive driver
+LR_L2_population_C1,cat__education_Bachelors degree(BA AB BS),0.2383445280662327,0.2383445280662327,1.269146374056004,positive driver
+LR_L2_population_C1,num__self_employed_flag,0.2326627703701022,0.2326627703701022,1.261955838661554,positive driver
+LR_L2_population_C1,cat__detailed household and family stat_Spouse of householder,0.2311135272507917,0.2311135272507917,1.260002275924186,positive driver
+LR_L2_population_C1,cat__detailed household summary in household_Spouse of householder,0.2301551111014448,0.2301551111014448,1.2587952479046938,positive driver
+LR_L2_population_C1,num__log1p_dividends from stocks,0.2300210292835925,0.2300210292835925,1.258626477664314,positive driver
+LR_L2_population_C1,cat__sex_Female,-0.6760534148712607,0.6760534148712607,0.5086203500641968,negative driver
+LR_L2_population_C1,cat__major occupation code_Adm support including clerical,-0.510977705878719,0.510977705878719,0.599908757670702,negative driver
+LR_L2_population_C1,num__detailed occupation recode,-0.5013199867957383,0.5013199867957383,0.6057305754171249,negative driver
+LR_L2_population_C1,cat__major industry code_Retail trade,-0.4990546387603617,0.4990546387603617,0.6071043214050185,negative driver
+LR_L2_population_C1,cat__education_High school graduate,-0.4942628240799285,0.4942628240799285,0.6100204339605033,negative driver
+LR_L2_population_C1,cat__major industry code_Education,-0.3986583995170147,0.3986583995170147,0.671219951254816,negative driver
+LR_L2_population_C1,cat__major occupation code_Other service,-0.3685004078657367,0.3685004078657367,0.6917709274484,negative driver
+LR_L2_population_C1,cat__age_bin_18_24,-0.333954289584576,0.333954289584576,0.7160865140911478,negative driver
+LR_L2_population_C1,cat__tax filer stat_Nonfiler,-0.2956125704935559,0.2956125704935559,0.7440756490453764,negative driver
+LR_L2_population_C1,cat__detailed household summary in household_Child 18 or older,-0.2793967570381524,0.2793967570381524,0.7562398002217278,negative driver
+LR_L2_population_C1,num__has_capital gains,-0.2570654750638977,0.2570654750638977,0.7733175790899087,negative driver
+LR_L2_population_C1,cat__class of worker_Not in universe,-0.2540281822522954,0.2540281822522954,0.7756699416124468,negative driver
+LR_L2_population_C1,cat__major occupation code_Not in universe,-0.2514868611404603,0.2514868611404603,0.7776436748936619,negative driver
+LR_L2_population_C1,cat__major industry code_Not in universe or children,-0.2514868611404603,0.2514868611404603,0.7776436748936619,negative driver
+LR_L2_population_C1,num__own business or self employed,-0.237928769375378,0.237928769375378,0.7882588372634254,negative driver
+LR_L2_population_C1,cat__education_Some college but no degree,-0.2285332139932309,0.2285332139932309,0.7956998683955412,negative driver
+LR_L2_population_C1,cat__marital stat_Never married,-0.2238738395499617,0.2238738395499617,0.7994159826878404,negative driver
+LR_L2_population_C1,cat__class of worker_Local government,-0.2223788133122099,0.2223788133122099,0.8006120243909276,negative driver
+LR_L2_population_C1,cat__class of worker_State government,-0.2222579424831532,0.2222579424831532,0.8007088008786778,negative driver
+LR_L2_population_C1,cat__race_Black,-0.2221105589168444,0.2221105589168444,0.8008268208942179,negative driver
+LR_L2_population_C1,cat__detailed household and family stat_Child 18+ never marr Not in a subfamily,-0.2023709498231624,0.2023709498231624,0.8167918829339307,negative driver
+LR_L2_population_C1,cat__education_10th grade,-0.1998324962587047,0.1998324962587047,0.8188679050286476,negative driver
+LR_L2_population_C1,cat__education_11th grade,-0.1998245373967536,0.1998245373967536,0.818874422311195,negative driver
+LR_L2_population_C1,cat__agebin_education_combo_25_34__High school graduate,-0.1950551290547532,0.1950551290547532,0.8227892972094634,negative driver
+LR_L2_population_C1,cat__education_7th and 8th grade,-0.1895461351186098,0.1895461351186098,0.8273345468395245,negative driver

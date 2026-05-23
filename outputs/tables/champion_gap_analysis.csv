@@ -1,0 +1,5 @@
+model,role,AP_gap_vs_champion,F1_gap_vs_champion,Brier_gap_vs_champion,PrecisionTop5_gap_vs_champion,LiftTop5_gap_vs_champion
+REFERENCE_practical_LightGBM,Final performance champion,0.0,0.0,0.0,0.0,0.0
+Monotonic_constrained_LightGBM,Best interpretability-performance challenger,-0.008386733637661958,-0.008297168919786713,0.0012358318103353957,-0.013134337233548177,-0.2034141723779772
+LR_L2_classpow035_C1,Interpretable class-weighted benchmark,-0.07445345103007162,-0.051620584943324554,0.0038333604233209,-0.06714385964186287,-1.039870714178635
+LR_L2_population_C1,Interpretable population-weighted benchmark,-0.0784573978112828,-0.056369061558492306,0.004160725949940096,-0.07192189088746681,-1.1138690632493553
