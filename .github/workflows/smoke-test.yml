@@ -1,5 +1,7 @@
 name: smoke-test
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   smoke:
     runs-on: ubuntu-latest
@@ -8,10 +10,31 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
-      - run: python -m pip install --upgrade pip && pip install -r requirements.txt && pip install -e .
-      - run: python scripts/verify_selected_four_artifacts.py
-      - run: python scripts/evaluate_selected_four_models.py
-      - run: pytest -q
-      - run: python scripts/run_full_retraining_pipeline.py --models practical --quick-rows 200 --n-estimators 1 --out-dir /tmp/retraining_smoke
-      - run: python scripts/predict_selected_model.py --model practical --include-labels --out /tmp/practical_ci_scores.csv
+          cache: pip
+      - name: Install source and test dependencies
+        run: python -m pip install -r requirements.txt && python -m pip install -e .
+      - name: Verify tracked model artifacts and reports
+        run: python scripts/verify_selected_four_artifacts.py
+      - name: Unit tests with synthetic input fixtures
+        run: python -m pytest -q
+      - name: Determine whether external source data is available
+        id: external
+        shell: bash
+        run: |
+          if test -f data/TakeHomeProject.zip; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "Full-data evaluation and retraining NOT RUN: data/TakeHomeProject.zip is not distributed in this public checkout." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Verify original data and recompute evaluation
+        if: steps.external.outputs.available == 'true'
+        run: |
+          python scripts/verify_selected_four_artifacts.py --require-source-data
+          python scripts/evaluate_selected_four_models.py
+      - name: Full-data retraining smoke
+        if: steps.external.outputs.available == 'true'
+        run: python scripts/run_full_retraining_pipeline.py --models practical --quick-rows 200 --n-estimators 1 --out-dir /tmp/retraining_smoke
+      - name: Full-data scoring smoke
+        if: steps.external.outputs.available == 'true'
+        run: python scripts/predict_selected_model.py --model practical --include-labels --out /tmp/practical_ci_scores.csv
