@@ -1,11 +1,15 @@
+import argparse
 from pathlib import Path
+
+parser = argparse.ArgumentParser(description='Verify public submission files.')
+parser.add_argument('--require-source-data', action='store_true', help='Require the separately distributed source archive.')
+args = parser.parse_args()
 
 ROOT = Path(__file__).resolve().parents[1]
 required = [
     "Project_Report.pdf",
     "PROJECT_REPORT.md",
     "README.md",
-    "data/TakeHomeProject.zip",
     "artifacts/practical/final_practical_model_bundle.joblib",
     "artifacts/practical/final_practical_lightgbm_booster.txt",
     "artifacts/shared/split_indices.csv",
@@ -40,7 +44,11 @@ required = [
     "scripts/predict_selected_model.py",
     "scripts/run_full_retraining_pipeline.py",
 ]
+if args.require_source_data:
+    required.append("data/TakeHomeProject.zip")
 missing = [path for path in required if not (ROOT / path).exists()]
 if missing:
     raise SystemExit("Missing required submission files:\n" + "\n".join(missing))
-print(f"Lean final submission verification passed: {len(required)} files found")
+print(f"Public artifact verification passed: {len(required)} files found")
+if not args.require_source_data:
+    print("Original training data is external. No data-dependent evaluation was performed.")

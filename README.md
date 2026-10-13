@@ -62,7 +62,11 @@ docs/segmentation_appendix.md    Optional segmentation details and clustering ap
 tests/                          Lightweight smoke tests
 ```
 
-The package includes only `data/TakeHomeProject.zip` for the raw take-home data. Scripts automatically extract it when needed, so the extracted raw-data folder is intentionally not included in the submitted ZIP.
+The original `data/TakeHomeProject.zip` input is not tracked in this public GitHub repository. Source-dependent evaluation, predictions, and retraining require supplying that archive separately under `data/`. Precomputed model artifacts and reference reports are retained, but their full-data metrics cannot be recomputed from the public checkout alone.
+
+## CI scope
+
+GitHub Actions validates the tracked model artifacts, report files, and synthetic-data unit tests. It explicitly marks full-dataset evaluation and retraining as not run when the original source archive is unavailable. A green source CI result is not a reproduction of the reported full-dataset metrics.
 
 ## Setup
 
