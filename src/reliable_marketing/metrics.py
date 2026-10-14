@@ -17,11 +17,17 @@ from sklearn.metrics import (
 
 
 def best_f1_threshold(y_true, score, sample_weight=None) -> float:
-    p, r, t = precision_recall_curve(y_true, score, sample_weight=sample_weight)
-    if len(t) == 0:
+    """Choose the observed score threshold with the highest PR-curve F1."""
+    precision, recall, thresholds = precision_recall_curve(
+        y_true, score, sample_weight=sample_weight
+    )
+    if len(thresholds) == 0:
         return 0.5
-    f = 2 * p[:-1] * r[:-1] / np.maximum(p[:-1] + r[:-1], 1e-12)
-    return float(t[int(np.nanargmax(f))])
+    f1 = (
+        2 * precision[:-1] * recall[:-1]
+        / np.maximum(precision[:-1] + recall[:-1], 1e-12)
+    )
+    return float(thresholds[int(np.nanargmax(f1))])
 
 
 def pr_auc_trapezoid(y_true, score, sample_weight=None) -> float:
