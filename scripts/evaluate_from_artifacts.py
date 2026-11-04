@@ -14,7 +14,12 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from reliable_marketing.data import load_census_income, resolve_data_dir
 from reliable_marketing.features import apply_rare_category_maps, build_pht_features
-from reliable_marketing.metrics import calibration_bins, evaluate_binary_scores, target_attainment, weighted_confusion
+from reliable_marketing.metrics import (
+    calibration_bins,
+    evaluate_binary_scores,
+    target_attainment,
+    weighted_confusion,
+)
 from reliable_marketing.models import safe_logit
 
 MODEL_CONFIG = {
@@ -28,11 +33,17 @@ MODEL_CONFIG = {
     },
     "logistic_classweighted": {
         "display_name": "LR_L2_classpow035_C1",
-        "path": ("logistic_classweighted", "LR_L2_classpow035_C1_sigmoid_calibrated_bundle.joblib"),
+        "path": (
+            "logistic_classweighted",
+            "LR_L2_classpow035_C1_sigmoid_calibrated_bundle.joblib",
+        ),
     },
     "logistic_population": {
         "display_name": "LR_L2_population_C1",
-        "path": ("logistic_population", "LR_L2_population_C1_sigmoid_calibrated_bundle.joblib"),
+        "path": (
+            "logistic_population",
+            "LR_L2_population_C1_sigmoid_calibrated_bundle.joblib",
+        ),
     },
 }
 
@@ -56,23 +67,33 @@ def apply_calibrator(calibrator, raw, mode: str) -> np.ndarray:
     raise ValueError(f"Unknown calibration mode: {mode}")
 
 
-def score_bundle(model_key: str, X: pd.DataFrame, artifact_dir: Path) -> tuple[np.ndarray, np.ndarray]:
+def score_bundle(
+    model_key: str, X: pd.DataFrame, artifact_dir: Path
+) -> tuple[np.ndarray, np.ndarray]:
     cfg = MODEL_CONFIG[model_key]
     bundle = joblib.load(artifact_dir.joinpath(*cfg["path"]))
 
     if model_key == "practical":
         xmat = bundle["feature_encoder"].transform(X)
         with warnings.catch_warnings():
-            warnings.filterwarnings("ignore", message="X does not have valid feature names.*")
-            raw = bundle["lightgbm_model"].predict_proba(as_lgbm_input(xmat, bundle["lightgbm_model"]))[:, 1]
+            warnings.filterwarnings(
+                "ignore", message="X does not have valid feature names.*"
+            )
+            raw = bundle["lightgbm_model"].predict_proba(
+                as_lgbm_input(xmat, bundle["lightgbm_model"])
+            )[:, 1]
         calibrated = apply_calibrator(bundle["sigmoid_calibrator"], raw, "logit")
         return raw, calibrated
 
     if model_key == "monotonic":
         xmat = bundle["feature_encoder"].transform(X)
         with warnings.catch_warnings():
-            warnings.filterwarnings("ignore", message="X does not have valid feature names.*")
-            raw = bundle["model"].predict_proba(as_lgbm_input(xmat, bundle["model"]))[:, 1]
+            warnings.filterwarnings(
+                "ignore", message="X does not have valid feature names.*"
+            )
+            raw = bundle["model"].predict_proba(as_lgbm_input(xmat, bundle["model"]))[
+                :, 1
+            ]
         calibrated = apply_calibrator(bundle["sigmoid_calibrator"], raw, "raw")
         return raw, calibrated
 
@@ -131,7 +152,9 @@ def compare_with_stored(recomputed: pd.DataFrame, stored_path: Path) -> pd.DataF
         "Lift@Top20_w",
     ]
     rows = []
-    merged = stored.merge(recomputed, on="model", how="inner", suffixes=("_stored", "_recomputed"))
+    merged = stored.merge(
+        recomputed, on="model", how="inner", suffixes=("_stored", "_recomputed")
+    )
     for _, r in merged.iterrows():
         for m in common_metrics:
             s_col, rc_col = f"{m}_stored", f"{m}_recomputed"
@@ -167,7 +190,11 @@ def run(args: argparse.Namespace) -> pd.DataFrame:
     y_eval = y.iloc[eval_idx].reset_index(drop=True)
     w_eval = w.iloc[eval_idx].reset_index(drop=True)
 
-    requested = list(MODEL_CONFIG) if args.models == "all" else [m.strip() for m in args.models.split(",") if m.strip()]
+    requested = (
+        list(MODEL_CONFIG)
+        if args.models == "all"
+        else [m.strip() for m in args.models.split(",") if m.strip()]
+    )
     bad = sorted(set(requested) - set(MODEL_CONFIG))
     if bad:
         raise ValueError(f"Unknown model key(s): {bad}. Valid: {sorted(MODEL_CONFIG)}")
@@ -190,12 +217,22 @@ def run(args: argparse.Namespace) -> pd.DataFrame:
         row["model_key"] = key
         rows.append(row)
 
-        bins = calibration_bins(y_eval.iloc[test_pos], score[test_pos], sample_weight=w_eval.iloc[test_pos], n_bins=10)
+        bins = calibration_bins(
+            y_eval.iloc[test_pos],
+            score[test_pos],
+            sample_weight=w_eval.iloc[test_pos],
+            n_bins=10,
+        )
         bins.insert(0, "model", MODEL_CONFIG[key]["display_name"])
         bins.insert(1, "model_key", key)
         all_bins.append(bins)
 
-        cm = weighted_confusion(y_eval.iloc[test_pos], score[test_pos], row["threshold"], w_eval.iloc[test_pos]).reset_index(names="true_label")
+        cm = weighted_confusion(
+            y_eval.iloc[test_pos],
+            score[test_pos],
+            row["threshold"],
+            w_eval.iloc[test_pos],
+        ).reset_index(names="true_label")
         cm.insert(0, "model", MODEL_CONFIG[key]["display_name"])
         cm.insert(1, "model_key", key)
         all_confusions.append(cm)
@@ -227,34 +264,71 @@ def run(args: argparse.Namespace) -> pd.DataFrame:
         "Lift@Top20_w",
         "Recall@Top20_w",
     ]
-    metrics = metrics[[c for c in front if c in metrics.columns] + [c for c in metrics.columns if c not in front]]
-    metrics.to_csv(out_metrics / "recomputed_selected_four_model_comparison.csv", index=False)
-    build_topk_table(metrics).to_csv(out_tables / "recomputed_topk_policy_by_model.csv", index=False)
-    pd.concat(all_bins, ignore_index=True).to_csv(out_tables / "calibration_bins_by_model.csv", index=False)
-    pd.concat(all_confusions, ignore_index=True).to_csv(out_tables / "weighted_confusion_by_model.csv", index=False)
+    metrics = metrics[
+        [c for c in front if c in metrics.columns]
+        + [c for c in metrics.columns if c not in front]
+    ]
+    metrics.to_csv(
+        out_metrics / "recomputed_selected_four_model_comparison.csv", index=False
+    )
+    build_topk_table(metrics).to_csv(
+        out_tables / "recomputed_topk_policy_by_model.csv", index=False
+    )
+    pd.concat(all_bins, ignore_index=True).to_csv(
+        out_tables / "calibration_bins_by_model.csv", index=False
+    )
+    pd.concat(all_confusions, ignore_index=True).to_csv(
+        out_tables / "weighted_confusion_by_model.csv", index=False
+    )
 
     targets = []
     for _, r in metrics.iterrows():
-        targets.append(target_attainment(r).assign(model=r["model"], model_key=r["model_key"]))
-    pd.concat(targets, ignore_index=True).to_csv(out_metrics / "recomputed_target_attainment.csv", index=False)
+        targets.append(
+            target_attainment(r).assign(model=r["model"], model_key=r["model_key"])
+        )
+    pd.concat(targets, ignore_index=True).to_csv(
+        out_metrics / "recomputed_target_attainment.csv", index=False
+    )
 
-    cmp = compare_with_stored(metrics, out_metrics / "selected_four_model_comparison.csv")
+    cmp = compare_with_stored(
+        metrics, out_metrics / "selected_four_model_comparison.csv"
+    )
     if not cmp.empty:
         cmp.to_csv(out_metrics / "recomputed_vs_stored_metric_deltas.csv", index=False)
 
-    display_cols = ["model", "AP_w", "PR_AUC_trapz_w", "F1_w", "Brier_w", "ECE10_w", "Precision@Top5_w", "Lift@Top5_w"]
+    display_cols = [
+        "model",
+        "AP_w",
+        "PR_AUC_trapz_w",
+        "F1_w",
+        "Brier_w",
+        "ECE10_w",
+        "Precision@Top5_w",
+        "Lift@Top5_w",
+    ]
     print(metrics[display_cols].to_string(index=False))
-    print(f"Saved recomputed metrics to {out_metrics / 'recomputed_selected_four_model_comparison.csv'}")
+    print(
+        f"Saved recomputed metrics to {out_metrics / 'recomputed_selected_four_model_comparison.csv'}"
+    )
     return metrics
 
 
 def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(description="Recompute held-out metrics from submitted model artifacts.")
-    p.add_argument("--models", default="all", help="all or comma-separated: practical,monotonic,logistic_classweighted,logistic_population")
+    p = argparse.ArgumentParser(
+        description="Recompute held-out metrics from submitted model artifacts."
+    )
+    p.add_argument(
+        "--models",
+        default="all",
+        help="all or comma-separated: practical,monotonic,logistic_classweighted,logistic_population",
+    )
     p.add_argument("--data-zip", default=str(ROOT / "data" / "TakeHomeProject.zip"))
     p.add_argument("--data-dir", default=None)
     p.add_argument("--artifact-dir", default=str(ROOT / "artifacts"))
-    p.add_argument("--split-indices", default=str(ROOT / "artifacts" / "shared" / "split_indices.csv"))
+    p.add_argument(
+        "--split-indices",
+        default=str(ROOT / "artifacts" / "shared" / "split_indices.csv"),
+    )
     return p
 
 
