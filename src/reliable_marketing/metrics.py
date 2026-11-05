@@ -42,24 +42,33 @@ def pr_auc_trapezoid(y_true, score, sample_weight=None) -> float:
     return float(auc(recall[order], precision[order]))
 
 
-def calibration_bins(y_true, score, sample_weight=None, n_bins: int = 10) -> pd.DataFrame:
-    y = np.asarray(y_true, dtype=float)
-    s = np.clip(np.asarray(score, dtype=float), 0.0, 1.0)
-    w = np.ones_like(s, dtype=float) if sample_weight is None else np.asarray(sample_weight, dtype=float)
+def calibration_bins(
+    y_true, score, sample_weight=None, n_bins: int = 10
+) -> pd.DataFrame:
+    """Summarize predicted scores and observed positive rates within each score bin."""
+    observed_labels = np.asarray(y_true, dtype=float)
+    predicted_scores = np.clip(np.asarray(score, dtype=float), 0.0, 1.0)
+    sample_weights = (
+        np.ones_like(predicted_scores, dtype=float)
+        if sample_weight is None
+        else np.asarray(sample_weight, dtype=float)
+    )
     edges = np.linspace(0.0, 1.0, n_bins + 1)
     # Include 1.0 in the final bin.
-    bin_id = np.minimum(np.searchsorted(edges, s, side="right") - 1, n_bins - 1)
+    bin_id = np.minimum(
+        np.searchsorted(edges, predicted_scores, side="right") - 1, n_bins - 1
+    )
     bin_id = np.maximum(bin_id, 0)
     rows = []
-    total_w = w.sum()
-    for b in range(n_bins):
-        mask = bin_id == b
+    total_weight = sample_weights.sum()
+    for bin_index in range(n_bins):
+        mask = bin_id == bin_index
         if not np.any(mask):
             rows.append(
                 {
-                    "bin": b,
-                    "score_min": edges[b],
-                    "score_max": edges[b + 1],
+                    "bin": bin_index,
+                    "score_min": edges[bin_index],
+                    "score_max": edges[bin_index + 1],
                     "n": 0,
                     "weight_share": 0.0,
                     "avg_predicted_score": np.nan,
@@ -68,19 +77,25 @@ def calibration_bins(y_true, score, sample_weight=None, n_bins: int = 10) -> pd.
                 }
             )
             continue
-        bw = w[mask].sum()
-        avg_pred = float(np.average(s[mask], weights=w[mask]))
-        obs = float(np.average(y[mask], weights=w[mask]))
+        bin_weight = sample_weights[mask].sum()
+        mean_predicted_score = float(
+            np.average(predicted_scores[mask], weights=sample_weights[mask])
+        )
+        observed_positive_rate = float(
+            np.average(observed_labels[mask], weights=sample_weights[mask])
+        )
         rows.append(
             {
-                "bin": b,
-                "score_min": edges[b],
-                "score_max": edges[b + 1],
+                "bin": bin_index,
+                "score_min": edges[bin_index],
+                "score_max": edges[bin_index + 1],
                 "n": int(mask.sum()),
-                "weight_share": float(bw / total_w) if total_w else 0.0,
-                "avg_predicted_score": avg_pred,
-                "observed_positive_rate": obs,
-                "abs_gap": abs(avg_pred - obs),
+                "weight_share": float(bin_weight / total_weight)
+                if total_weight
+                else 0.0,
+                "avg_predicted_score": mean_predicted_score,
+                "observed_positive_rate": observed_positive_rate,
+                "abs_gap": abs(mean_predicted_score - observed_positive_rate),
             }
         )
     return pd.DataFrame(rows)
@@ -93,17 +108,26 @@ def expected_calibration_error(y_true, score, sample_weight=None, n_bins: int = 
 
 
 def topk_metrics(y_true, score, sample_weight, pct: float):
-    y = np.asarray(y_true)
-    s = np.asarray(score)
-    w = np.asarray(sample_weight, dtype=float)
-    k = max(1, int(np.ceil(len(y) * pct)))
-    idx = np.argsort(-s)[:k]
-    tp_w = (w[idx] * y[idx]).sum()
-    pred_w = w[idx].sum()
-    pos_w = (w * y).sum()
-    base_rate = pos_w / w.sum()
-    precision = tp_w / pred_w if pred_w > 0 else 0.0
-    recall = tp_w / pos_w if pos_w > 0 else 0.0
+    """Compute weighted precision, recall, and lift for the highest scoring fraction."""
+    observed_labels = np.asarray(y_true)
+    predicted_scores = np.asarray(score)
+    sample_weights = np.asarray(sample_weight, dtype=float)
+    selected_count = max(1, int(np.ceil(len(observed_labels) * pct)))
+    selected_indices = np.argsort(-predicted_scores)[:selected_count]
+    selected_positive_weight = (
+        sample_weights[selected_indices] * observed_labels[selected_indices]
+    ).sum()
+    selected_weight = sample_weights[selected_indices].sum()
+    total_positive_weight = (sample_weights * observed_labels).sum()
+    base_rate = total_positive_weight / sample_weights.sum()
+    precision = (
+        selected_positive_weight / selected_weight if selected_weight > 0 else 0.0
+    )
+    recall = (
+        selected_positive_weight / total_positive_weight
+        if total_positive_weight > 0
+        else 0.0
+    )
     lift = precision / base_rate if base_rate > 0 else 0.0
     return precision, recall, lift
 
